@@ -1,0 +1,218 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.container p{
+    text-align: justify;
+}
+.navbar {
+    background-color: rgba(21, 19, 19, 0.225); /* semi-transparent black background */
+    padding: 20px 0px 0px 0px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar h1 {
+    margin-left: 20px;
+}
+
+.navbar nav {
+    float: right;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-right: 5px;
+    padding: 10px 20px;
+}
+.navbar ul li:hover{
+    border-bottom: 1px solid greenyellow;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.top-section {
+    background-color: #000;
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.top-section .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-section .content {
+    flex: 1;
+}
+
+.top-section h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.top-section p {
+    font-size: 1.1em;
+}
+
+.photo img {
+    max-width: 150%;
+    animation: moveLeftToRight 5s linear infinite alternate;
+}
+
+.animated-text {
+    animation: slideInText 2s ease infinite alternate;
+}
+
+@keyframes slideInText {
+    0% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(15%);
+    }
+}
+
+@keyframes moveLeftToRight {
+    0% {
+        transform: translateX(-5%);
+    }
+    100% {
+        transform: translateX(5%);
+    }
+}
+
+.wrapper{
+    display: flex;
+}
+.wrapper .static-txt{
+    font-size: 70px;
+    font-weight: 800;
+    color: #fff;
+    margin-top: -15px;
+}
+.dynamic-txts{
+    margin-left: 15px;
+    line-height: 90px;
+    height: 90px;
+    overflow: hidden;
+}
+.dynamic-txts li{
+    list-style: none;
+    font-size: 60px;
+    font-weight: bold;
+    color: #Fc6d60;
+    position: relative;
+    top: 0;
+    animation: change 16s steps(4) infinite;
+}
+@keyframes change {
+    100%{
+        top: -360px;
+    }    
+}
+.dynamic-txts li span{
+    position: relative;
+}
+.dynamic-txts li span::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+    background-color: black;
+    background-color: azurez;
+    border-left: 4px solid #Fc6d60;
+    left: 0;
+    animation: type 2s steps(10) infinite alternate;
+}
+@keyframes type {
+    100%{
+        left: 100%;
+        border-color: #ba3002;
+        margin: 0px -35px 0px 35px;
+    }    
+}
+
+
+#project{
+    width: 100%;
+    padding: 10px 100px;
+    background: #27302c;
+}
+#project h1{
+    font-size: 2.9rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 100%;
+    margin: 0vh 0vh 5vh 0vh;
+    text-align: center;
+    text-decoration: underline;
+    color: white;
+}
+.projectbox{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.box{
+    border: 2px solid white;
+    padding: 2vh;
+}
+.box img{
+width: 80vh;
+}
+.projectExplanation{
+    display: flex;
+    flex-direction: column;
+    && h2{
+        font-size: 30px;
+        color: rgb(177, 218, 177);
+    }
+    && h3{
+        color: rgb(159, 159, 184);
+        font-size: 1.6rem;
+        margin: 2vh 0vh;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    && button{
+        background: none;
+        border: none;
+        font-size: 15px;
+        font-weight: bold;
+        width: 100px;
+        margin: 5vh 0vh 1vh 0vh;
+        text-wrap: nowrap;
+        padding: 1vh;
+    }
+    && button:hover{
+        background: gray;
+        color: white;
+    }
+}

@@ -1,0 +1,637 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body{
+    background: rgb(226, 226, 226);
+  }
+  nav{
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    left: 0;
+    width: 90px;
+    /* width: 280px; */
+    background: #fff;
+    overflow: hidden;
+    transition: 1s;
+  }
+  nav:hover{
+    width: 280px;
+    transition: 1s;
+  }
+  .logo{
+    text-align: center;
+    display: flex;
+    margin: 10px 0 40px 10px;
+    padding-bottom: 1em;
+  }
+  
+  .logo img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+  }
+  .logo span{
+    font-weight: bold;
+    padding-left: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  a{
+    position: relative;
+    width: 280px;
+    font-size: 14px;
+    color: rgb(85, 83, 83);
+    display: table;
+    padding: 10px;
+  }
+  nav .fas{
+    position: relative;
+    width: 70px;
+    height: 40px;
+    top: 10px;
+    font-size: 20px;
+    text-align: center;
+  }
+  nav ul{
+  list-style: none;
+  }
+  .nav-item{
+    position: relative;
+    top: 7px;
+    margin-left: 10px;
+  }
+  a:hover{
+    background: #eee;
+  }
+  a:hover i{
+    color: #34AF6D;
+    transition: 0.5s;
+  }
+  .logout{
+    position: absolute;
+    bottom: 0;
+  }
+  
+  .container{
+    display: flex;
+  }
+  
+  /* MAin Section */
+  .main{
+    position: relative;
+    padding: 20px;
+    width: 100%;
+  }
+  .main-top{
+    display: flex;
+    width: 100%;
+  }
+  .main-top i{
+    position: absolute;
+    right: 0;
+    margin: 10px 30px;
+    color: rgb(110, 109, 109);
+    cursor: pointer;
+  }
+  .main .users{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .users .class{
+    width: 30%;
+    margin: 10px;
+    background: #fff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  }
+  .users .card{
+    width: 22%;
+    margin: 10px;
+    background: #fff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  }
+  .users .card img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+  .users .card p{
+    font-size: 12px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+  .users table{
+    margin:  auto;
+  }
+  .users .per span{
+    padding: 5px;
+    border-radius: 10px;
+    background: rgb(223, 223, 223);
+  }
+  .users td{
+    font-size: 14px;
+    padding-right: 15px;
+  }
+  .users .card button{
+    width: 100%;
+    margin-top: 8px;
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 10px;
+    background: transparent;
+    border: 1px solid #4AD489;
+  }
+  .users .card button:hover{
+    background: #4AD489;
+    color: #fff;
+    transition: 0.5s;
+  }
+  .users .class button{
+    width: 100%;
+    margin-top: 8px;
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 10px;
+    background: transparent;
+    border: 1px solid #4AD489;
+  }
+  .users .class button:hover{
+    background: #4AD489;
+    color: #fff;
+    transition: 0.5s;
+  }
+  
+  /*Attendance List serction  */
+h1{
+    font-size: 1.6rem;
+}
+  .attendance{
+    margin-top: 20px;
+    text-transform: capitalize;
+  }
+  .attendance-list{
+    width: 100%;
+    padding: 30px 10px 10px 10px;
+    margin-top: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  }
+  .school-contain{
+  width: 100%;
+  margin: 20px 0px;
+  background: rgb(73, 79, 74);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+  }
+  .three-contain{
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  }
+.school-contain .three-contain  .users .class .adding:hover{
+background: rgb(6, 41, 179);
+}
+.school-contain .three-contain  .users .class .delete:hover{
+background: rgb(153, 11, 11);
+}
+.school-contain .three-contain  .users .class .update:hover{
+background: rgb(7, 181, 28);
+}
+.animated-number {
+font-size: 3rem;
+
+&& h2{
+padding: 10px;
+animation: number 3s infinite alternate;
+}
+}
+@keyframes number{
+0%{
+opacity: 100%;
+transform: scale(1);
+color: greenyellow;
+}
+50%{
+transform: scale(1.2);
+opacity: 45%;
+color: red;
+}
+100%{
+transform: scale(1.3);
+opacity: 20%;
+color: blue;
+}
+}
+
+
+.login_signup button{
+  width: 49%;
+  height: 6vh;
+  font-size: 1.3rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.hidden{
+  display: none;
+}
+.login_signup input{
+  margin: 0.5vh 0vh;
+  width: 99%;
+  padding: 1vh 7vh;
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.cancel-button{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.5rem;
+  /* margin: 30vh 68vh -38vh 0vh; */
+  box-shadow: 0.3rem 0.3rem 2rem white;
+}
+.onclicked{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content:  center;
+  align-items: center;
+  position: absolute;
+}
+.container{
+  position: relative;
+}
+#onclicked{
+  display: none;
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  position: fixed;
+}
+#onclickeddlt{
+  display: none;
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  position: fixed;
+}
+#onclickedupd{
+  display: none;
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  position: fixed;
+}
+#onclickedupdated{
+  display: none;
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  position: fixed;
+}
+.additionm{
+  width: 100%;
+  background:red;
+  height: 100vh;
+  display: flex;
+  justify-content:  center;
+  align-items: center;
+}
+.hidden{
+  display: none;
+}
+.addition{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content:  center;
+  align-items: center;
+  && form{
+    padding: 10px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0.2rem 0.3rem 2rem rgb(48, 67, 54);
+  }
+h2{
+  font-size: 1.3rem;
+  padding: 1vh 0vh;
+}
+input[type=submit]{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid  green;
+  border-radius: 10px;
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+}
+input[type=submit]:hover{
+  background: rgb(23, 172, 23);
+  color: white;
+}
+}
+label{
+  font-weight: bold;
+}
+input[type=text]{
+  width: 100%;
+  padding: 10px;
+  margin: 1vh 0vh 3vh 0vh;
+  background: #eaeaea;
+  border: 0.7px solid rgb(129, 129, 129);
+  border-radius: 10px;
+  height: 6vh;
+ font-size: 1.2rem;
+}
+hr{
+  margin: 0vh 0vh 3vh 0vh;
+  width: 100%;
+  height: 0.2vh;
+  background: rgb(0, 0, 0);
+}
+.button{
+  margin: -75vh -80vh 0vh 80vh;
+  position: fixed;
+}
+.button input{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: rgb(255, 255, 255);
+  box-shadow: 0.2rem 0.1rem 2rem white;
+  font-weight: bold;
+  font-size: 2rem;
+  background: rgb(0, 0, 0);
+  position: fixed;
+}
+.addition form select{
+  width: 25vh;
+  height: 6vh;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 10px;
+}
+.button input:hover{
+  background: white;
+  color: black;
+  cursor: pointer;
+}
+#onclickedt{
+  display: none;
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  position: fixed;
+}
+#onclickeddltt{
+  display: none;
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  position: fixed;
+}
+#onclickedupdt{
+  display: none;
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  position: fixed;
+}
+#onclickedl{
+  display: none;
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  position: fixed;
+}
+#onclickedd{
+  display: none;
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  position: fixed;
+}
+#onclickeddltl{
+  display: none;
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  position: fixed;
+}
+#onclickedupdl{
+  display: none;
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  position: fixed;
+}
+.viewform{
+  width: 65%;
+  height: 60vh;
+  padding: 10px;
+  background: rgb(2, 60, 46);
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.profile{
+  width: 45%;
+  height: 100%;
+  background: rgb(105, 107, 105);
+  && img{
+    width: 100%;
+    height: 100%;
+  }
+}
+.information{
+  width: 55%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  padding: 15px 15px 0px 15px;
+  && h2{
+    font-size: 1.6rem;
+    text-decoration: underline;
+    text-align: center;
+  }
+  && h4{
+    margin: 1vh 0vh;
+  }
+  && .buttoninfo{
+    margin: 4vh 0vh 0vh 0vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    border: none;
+    border-radius: 0%;
+  }
+  && input[type=reset]{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid  rgb(128, 0, 105);
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  && input[type=reset]:hover{
+    color: rgb(255, 255, 255);
+    background: red;
+  }
+  && input[type=submit]:hover{
+    background: green;
+  }
+}
+
+section .content {
+    margin: 40px
+}
+
+section .content .outline{
+    border: 2px solid black;
+    outline-style: double;
+}
+section .content .table1{
+    border: 1px solid black;
+    margin: 0vh 1vh;
+    width: 99%;
+    && th{
+        border: 1px solid black;
+    }
+    && td{
+        border: 1px solid black;
+    }
+}
+.logo2{
+    display: inline-flex;
+    padding: 2vh;
+    margin: 2vh 2vh 0vh 10vh;
+    && img{
+        width: 30vh;
+        height: 30vh;
+        border: 1px solid black;
+    }
+    && .header{
+        text-align: left;
+        margin: 2vh 40vh 0vh 30vh;
+        width: 50%;
+        font-size: 1.1rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+}
+section .content hr{
+    width: 100%;
+    height: 0.1vh;
+    background: black;
+    padding: 0vh 2vh;
+    margin: 2vh 0vh 2vh 0vh;
+}
+section .content .header2{
+    width: 100%;
+    display: inline-flex;
+    font-size: 1.2rem;
+    && .rtb{
+        margin: 0vh 10vh 0vh 5vh ;
+    }
+    && .term{
+        margin: 0vh 10vh 0vh 20vh;
+    }
+    && .middle{
+        margin: 0vh 5vh 0vh 30vh;
+    }
+}
+section .content .status{
+    text-align: center;
+    width: 100%;
+    font-weight: bolder;
+    text-decoration: underline;
+    font-size: 1.4rem;
+}
+section .content .under{
+    display: inline-flex;
+    font-weight: bolder;
+    font-size: 1rem;
+    padding-top: 3vh;
+    text-wrap: nowrap;
+    && .signature{
+        height: 20vh;
+        width: 30vh;
+    }
+    && .manager{
+        margin: 10vh 4vh 0vh 4vh;
+        height: 13vh;
+    }
+    && .explain{
+        height: 10vh;
+        font-weight: lighter;
+        && hr{
+            width: 100vh;
+        }
+    }
+    && .table2{
+        margin: 0vh 5vh;
+        height: 10vh;
+        && tr{
+            height: 0.5vh;
+        }
+        && td{
+            border: 1px solid black;
+        }
+    }
+}
+section .content .under .line{
+    width: 90vh;
+    display: inline-flex;
+    padding: 2vh 0vh 0vh 0vh;
+    border-top: 0.4vh solid black;
+}
+section .content .under .code{
+    display: block;
+    height: 35vh;
+    width: 35vh;
+    margin: -4vh 3vh 4vh 1vh;
+    && img{
+        width: 35vh;
+        height: 30vh;
+    }
+    && span{
+        font-size: 0.9rem;
+    }
+}
+/*----------End of Report-------*/
+/*----------Start of mark preparing-------*/
+section .content .adding{
+    display: grid;
+    place-items: center;
+    && .selection{
+        width: 100vh;
+        height: 45vh;
+        box-shadow: 0.2rem 0.2rem 0.5rem rgb(146, 147, 146);
+        && h2{
+            text-align: center;
+            padding: 5vh;
+            color: green;
+        }
+        && .selectdp{
+            width: 40vh;
+            height: 30vh;
+            box-shadow: 0.1rem 0.1rem 0.6rem green;
+        }
+    }
+}
